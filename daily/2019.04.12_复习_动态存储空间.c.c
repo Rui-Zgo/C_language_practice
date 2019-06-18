@@ -1,69 +1,69 @@
     #include <stdio.h>
     #include <stdlib.h>
     #include <malloc.h>
-    int varGlobal1 ;            //È«¾Ö±äÁ¿
+    int varGlobal1 ;            //å…¨å±€å˜é‡
     int varGlobal2 ;
     int varGlobal3 ;
     int varGlobal4 = 1;
     int varGlobal5 = 2;
     int varGlobal6 = 3;
-    const int varGlobalCons1 = 4;      //³£Á¿±äÁ¿
+    const int varGlobalCons1 = 4;      //å¸¸é‡å˜é‡
     const int varGlobalCons2 = 5;
     const int varGlobalCons3 = 6;
-    static int varGlobalStat1 = 7;        //static¾²Ì¬È«¾Ö±äÁ¿
+    static int varGlobalStat1 = 7;        //staticé™æ€å…¨å±€å˜é‡
     static int varGlobalStat2 = 8;
     static int varGlobalStat3 = 9;
     void funcTest(int param1, int param2, int param3)
     {
-        int varLocal1 = 10;                  //Õ»-¾Ö²¿±äÁ¿
+        int varLocal1 = 10;                  //æ ˆ-å±€éƒ¨å˜é‡
         int varLocal2 = 11;
         int varLocal3 = 12;
-        const int varLocalCons1 = 0;     //Õ»-³£Á¿±äÁ¿
+        const int varLocalCons1 = 0;     //æ ˆ-å¸¸é‡å˜é‡
         const int varLocalCons2 = 0;
         const int varLocalCons3 = 0;
-        printf("º¯ÊıÄÚ±äÁ¿µØÖ·\n");
+        printf("å‡½æ•°å†…å˜é‡åœ°å€\n");
         printf("varLocal1 = %x, varLocal2 = %x, varLocal3 = %x\n",&varLocal1,&varLocal2,&varLocal3);
-        printf("º¯ÊıÄÚ³£Á¿µØÖ·\n");
+        printf("å‡½æ•°å†…å¸¸é‡åœ°å€\n");
         printf("varLocalCons1 = %x, varLocalCons2 = %x, varLocalCons3 = %x\n",&varLocalCons1,&varLocalCons2,&varLocalCons3);
-        printf("º¯Êı²ÎÊıµØÖ·\n");
+        printf("å‡½æ•°å‚æ•°åœ°å€\n");
         printf("param1 = %x, param2 = %x, param3 = %x\n",&param1,&param2,&param3);
     }
 int main()
     {
-        static int varLocalStat1 = 0;      //¾²Ì¬¾Ö²¿±äÁ¿
+        static int varLocalStat1 = 0;      //é™æ€å±€éƒ¨å˜é‡
         static int varLocalStat2 = 0;
         static int varLocalStat3 = 0;
         static int varLocalStat4 ;
         static int varLocalStat5 ;
         static int varLocalStat6 ;
-        const int varLocalCons1 = 0;     //³£Á¿±äÁ¿
+        const int varLocalCons1 = 0;     //å¸¸é‡å˜é‡
         const int varLocalCons2 = 0;
         const int varLocalCons3 = 0;
         int varLocal1 = 0;
-        int varLocal2 = 0;                    //¾Ö²¿±äÁ¿
+        int varLocal2 = 0;                    //å±€éƒ¨å˜é‡
         int varLocal3 = 0;
         char * pMalloc1, *pMalloc2, *pMalloc3;
-        pMalloc1 = (char *)malloc(sizeof(char)*10);       //¶Ñ
+        pMalloc1 = (char *)malloc(sizeof(char)*10);       //å †
         pMalloc2 = (char *)malloc(sizeof(char)*10);
         pMalloc3 = (char *)malloc(sizeof(char)*10);
         funcTest(varLocal1,varGlobal1,varGlobalCons1);
-        printf("main()±¾µØ±äÁ¿µØÖ·\n");
+        printf("main()æœ¬åœ°å˜é‡åœ°å€\n");
         printf("varLocal1 = %x, varLocal2 = %x, varLocal3 = %x\n",&varLocal1,&varLocal2,&varLocal3);
-        printf("main()±¾µØ³£Á¿µØÖ·\n");
+        printf("main()æœ¬åœ°å¸¸é‡åœ°å€\n");
         printf("varLocalCons1 = %x, varLocalCons2 = %x, varLocalCons3 = %x\n",&varLocalCons1,&varLocalCons2,&varLocalCons3);
-        printf("È«¾Ö±äÁ¿µØÖ·£¨³õÊ¼»¯£©\n");
+        printf("å…¨å±€å˜é‡åœ°å€ï¼ˆåˆå§‹åŒ–ï¼‰\n");
         printf("varGlobal4 = %x, varGlobal5 = %x, varGlobal6 = %x\n",&varGlobal4,&varGlobal5,&varGlobal6);
-        printf("È«¾Ö¾²Ì¬±äÁ¿µØÖ·\n");
+        printf("å…¨å±€é™æ€å˜é‡åœ°å€\n");
         printf("varGlobalStat1 = %x, varGlobalStat2 = %x, varGlobalStat3 = %x\n",&varGlobalStat1,&varGlobalStat2,&varGlobalStat3);
-        printf("È«¾Ö³£Á¿µØÖ·\n");
+        printf("å…¨å±€å¸¸é‡åœ°å€\n");
         printf("varGlobalCons1 = %x, varGlobalCons2 = %x, varGlobalCons3 = %x\n",&varGlobalCons1,&varGlobalCons2,&varGlobalCons3);
-        printf("±¾µØ¾²Ì¬±äÁ¿µØÖ·(ÒÑ³õÊ¼»¯)\n");
+        printf("æœ¬åœ°é™æ€å˜é‡åœ°å€(å·²åˆå§‹åŒ–)\n");
         printf("varLocalStat1 = %x, varLocalStat2 = %x, varLocalStat3 = %x\n",&varLocalStat1,&varLocalStat2,&varLocalStat3);
-        printf("±¾µØ¾²Ì¬±äÁ¿µØÖ·(Î´³õÊ¼»¯)\n");
+        printf("æœ¬åœ°é™æ€å˜é‡åœ°å€(æœªåˆå§‹åŒ–)\n");
         printf("varLocalStat4 = %x, varLocalStat5 = %x, varLocalStat6 = %x\n",&varLocalStat4,&varLocalStat5,&varLocalStat6);
-        printf("È«¾Ö±äÁ¿µØÖ·£¨Î´³õÊ¼»¯£©\n");
+        printf("å…¨å±€å˜é‡åœ°å€ï¼ˆæœªåˆå§‹åŒ–ï¼‰\n");
         printf("varGlobal1 = %x, varGlobal2 = %x, varGlobal3 = %x\n",&varGlobal1,&varGlobal2,&varGlobal3);
-        printf("ÔÚ¶ÑÉÏ·ÖÅäµÄÄÚ´æµØÖ·\n");
+        printf("åœ¨å †ä¸Šåˆ†é…çš„å†…å­˜åœ°å€\n");
         printf("pMalloc1 = %x, pMalloc2 = %x, pMalloc3 = %x\n",pMalloc1,pMalloc2,pMalloc3);
         free(pMalloc1);
         free(pMalloc2);
